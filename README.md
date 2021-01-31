@@ -13,6 +13,8 @@ Clean up generated files.
 Create object whenever the counter should start. Counting stops and data is stored 
 whenever the object goes out of scope or the destructor is called explicitly.
 
+main.cpp acts as a "test driver" for demo purposes.
+
 #Future plans
 add -make library. 
 Create static library for future ease of use.
