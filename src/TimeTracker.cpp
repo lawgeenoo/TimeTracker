@@ -17,7 +17,7 @@ namespace
     static std::map<std::string, TrackRecord>map; 
     
 }
-
+// print_stats() prints collected data.
 void print_stats(){
         for (auto& entry: map) {
         	std::cout<<"Func. name: "<<entry.first<< std::endl 
@@ -29,10 +29,11 @@ void print_stats(){
 
 
 
-
+//counter starts when obj. constructor is called.
 TimeTracker::TimeTracker(const std::string &str) :  
-    m_start {std::chrono::steady_clock::now()}, m_func_name{str} {}
+    m_start {std::chrono::steady_clock::now()}, m_func_name{str} {} 
 
+//Destructor time is calculated, and data is stored inside the TrackRecord. 
 TimeTracker::~TimeTracker(){
     
     auto currentTime = std::chrono::steady_clock::now();        

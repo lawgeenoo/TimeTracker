@@ -7,7 +7,7 @@ void abc();
 
     
 
- 
+// main driver
  int main()
  {
  
@@ -16,7 +16,7 @@ void abc();
     return 0;
  }
  
- 
+ // do something
  void fa_ceva(){
 	usleep(200);
 	
@@ -27,7 +27,8 @@ void abc() {
     
 for(int i =0; i < 10; i++)
     {
-         auto track2 = TimeTracker("abc2");
+        //TimeTracker object creation, terminates and end of scope unless destructor explicitly called.
+        auto m_track2 = TimeTracker("abc2");
          fa_ceva();
 	 
     }
