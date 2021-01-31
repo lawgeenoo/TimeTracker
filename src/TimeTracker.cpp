@@ -33,11 +33,11 @@ void print_stats(){
 TimeTracker::TimeTracker(const std::string &str) :  
     m_start {std::chrono::steady_clock::now()}, m_func_name{str} {} 
 
-//Destructor time is calculated, and data is stored inside the TrackRecord. 
+//Destructor: lifetime of the object is calculated, and data is stored inside the TrackRecord. 
 TimeTracker::~TimeTracker(){
     
     auto currentTime = std::chrono::steady_clock::now();        
-    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(currentTime - m_start);
+    auto duration = std::chrono::duration_cast<std::chrono::microseconds>(currentTime - m_start); 
     map[m_func_name].m_exec_time = duration.count();
     map[m_func_name].m_overall_time_us +=  map[m_func_name].m_exec_time;
     map[m_func_name].m_nbr_accesses++;    
