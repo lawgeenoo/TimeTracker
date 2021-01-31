@@ -11,7 +11,7 @@ Clean up generated files.
 
 #Usage
 Create object whenever the counter should start. Counting stops and data is stored 
-whenever the object goes out of scope or is called explicitly.
+whenever the object goes out of scope or the destructor is called explicitly.
 
 #Future plans
 add -make library. 
